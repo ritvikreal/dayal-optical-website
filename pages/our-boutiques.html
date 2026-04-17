@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUR BOUTIQUES</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .header {
+            background-color: rgb(247, 244, 238);
+        }
+
+        .footer ul a {
+            text-decoration: none;
+            color: gray;
+            line-height: 2;
+        }
+
+        .footer ul a:hover {
+            color: white;
+        }
+
+        .footer ul li {
+            color: gray;
+            line-height: 2;
+        }
+
+        .footer ul li:hover {
+            color: white;
+        }
+
+        .second-navbar {
+            top: 80px;
+            z-index: 1020;
+        }
+
+        body {
+            padding-top: 140px;
+
+        }
+
+        /* ................ */
+
+        .carousel-item {
+            height: 500px;
+        }
+
+        .carousel-item img {
+            height: 100%;
+            object-fit: fill;
+        }
+
+        /* ................ */
+
+        .scrolling-text {
+            width: 100%;
+            overflow: hidden;
+            background-color: rgb(56, 42, 31);
+            height: 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        .scrolling-text-inner {
+            display: flex;
+            width: max-content;
+            animation: scrollLeft 20s linear infinite;
+        }
+
+        .scrolling-text-item {
+            color: white;
+            font-size: 28px;
+            font-weight: 600;
+            margin-right: 60px;
+            white-space: nowrap;
+        }
+
+        @keyframes scrollLeft {
+
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+
+        }
+
+        .Instagram-slider {
+            animation: scrollSlider 20s linear infinite;
+        }
+
+        .Instagram-slider .col {
+            flex: 0 0 auto;
+            width: auto;
+        }
+
+        .Instagram-slider img {
+            height: 400px;
+        }
+
+        @keyframes scrollSlider {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div
+        class="container-fluid fixed-top d-flex flex-wrap flex-md-nowrap justify-content-between align-items-center header px-3 px-md-5 py-3">
+        <div>
+            <a class="btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                <i class="bi bi-search fs-5"></i></a>
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Search</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <input type="text" class="form-control" placeholder="Search for anything">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="text-center flex-grow-1">
+            <a href="../index.html">
+                <img src="../images/dayallogo.png" alt="dayallogo" class="text-dark img-fluid" style="max-height:60px;">
+            </a>
+        </div>
+
+
+        <div class="d-flex align-items-center gap-2">
+
+            <div class="btn-group">
+                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static"
+                    aria-expanded="false">
+                    <img src="../images/india.png" width="30px">
+                    INR
+                </button>
+                <ul class="dropdown-menu dropdown-menu-lg-end">
+                    <li>
+                        <button class="dropdown-item" type="button">
+                            <img src="../images/india.png" width="30px">
+                            Auto Location
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" type="button">
+                            <img src="../images/usa.png" width="30px">
+                            Us Dollar (USD)
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" type="button">
+                            <img src="../images/euro.webp" width="30px">
+                            Euro (EUR)
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" type="button">
+                            <img src="../images/afg.webp" width="30px">
+                            Afghan (AFN)
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" type="button">
+                            <img src="../images/caneda.webp" width="30px" alt="caneda">
+                            Canadian Dollar
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="../account/login.html" style="text-decoration: none;">
+                <span>
+                    <i class="bi bi-person text-dark fs-5 px-2"></i>
+                </span>
+            </a>
+            <a class="btn" data-bs-toggle="offcanvas" href="#cartOffcanvas" role="button" aria-controls="cartOffcanvas">
+
+                <i class="bi bi-cart fs-5"></i>
+            </a>
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false"
+                style="background-color: rgb(247, 244, 238);" tabindex="-1" id="cartOffcanvas"
+                aria-labelledby="cartOffcanvasLabel">
+
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="cartOffcanvasLabel">
+                        Cart
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+                    </button>
+                </div>
+                <div class="offcanvas-body d-flex justify-content-center">
+                    <hr>
+                    <div class="text-center mt-5" style="width: 18rem;">
+                        <img src="../images/cartImg.png" class="card-img-top" alt="cartImg">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Your cart is currently empty.
+                            </p>
+                            <a href="#" class="btn btn-success">
+                                Start Shopping
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <nav class="navbar fixed-top second-navbar navbar-expand-lg" style="background-color: rgb(247, 244, 238);">
+        <br><br><br>
+
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+
+                <ul class="nav justify-content-center w-100">
+
+
+                    <div class="btn-group position-static">
+
+                        <button class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                            SHOP
+                        </button>
+
+                        <div class="dropdown-menu w-100 p-4 overflow-auto" style="max-height:80vh;">
+
+                            <div class="container-fluid">
+                                <div class="row">
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h6>Featured Brands</h6>
+                                        <a class="dropdown-item" href="../collections/RayBan.html">Ray-Ban</a>
+                                        <a class="dropdown-item">Prada</a>
+                                        <a class="dropdown-item">Balenciaga</a>
+                                        <a class="dropdown-item">TOM Ford</a>
+                                        <a class="dropdown-item">Versace</a>
+                                        <a class="dropdown-item">Valentino</a>
+
+
+                                    </div>
+
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h6>By Gender</h6>
+                                        <a class="dropdown-item">women</a>
+                                        <a class="dropdown-item">Men</a>
+                                        <a class="dropdown-item">Unisex</a>
+                                    </div>
+
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h6>By Style</h6>
+                                        <a class="dropdown-item">Sunglasses</a>
+                                        <a class="dropdown-item">Frames</a>
+                                        <a class="dropdown-item">Masunaga</a>
+                                        <a class="dropdown-item">Contact lenses</a>
+                                        <a class="dropdown-item">Accesories</a>
+                                        <a class="dropdown-item">Clip on</a>
+
+
+                                    </div>
+
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h6>By Type</h6>
+                                        <a class="dropdown-item" href="../collections/Rigards.html">Rigards</a>
+                                        <a class="dropdown-item">Ray-Ban</a>
+                                        <a class="dropdown-item">Ray-Ban Meta</a>
+                                        <a class="dropdown-item">Sato</a>
+                                        <a class="dropdown-item">Swarovski</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="btn-group position-static">
+
+                        <button class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                            BRANDS
+                        </button>
+
+                        <div class="dropdown-menu w-100 p-4 overflow-auto" style="max-height:80vh;">
+
+                            <div class="container-fluid">
+                                <div class="row">
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h6>&nbsp &nbsp A - C</h6>
+                                        <a class="dropdown-item" href="../collections/ahlem.html">Ahlem</a>
+                                        <a class="dropdown-item" href="../collections/akoni.html">Akoni</a>
+                                        <a class="dropdown-item">Alexander McQueen</a>
+                                        <a class="dropdown-item">Anna-Karin Karlsson</a>
+                                        <a class="dropdown-item">Balenciaga</a>
+                                        <a class="dropdown-item">Balmain</a>
+                                        <a class="dropdown-item">Bottega Veneta</a>
+                                        <a class="dropdown-item">Burberry</a>
+                                        <a class="dropdown-item">Bvlgari</a>
+                                        <a class="dropdown-item">Capote</a>
+                                        <a class="dropdown-item">Cartier</a>
+                                        <a class="dropdown-item">Carrera</a>
+                                        <a class="dropdown-item">Celine</a>
+                                        <a class="dropdown-item">Chloe</a>
+                                        <a class="dropdown-item">Coco Leni</a>
+                                    </div>
+
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h6>&nbsp &nbsp D - K</h6>
+                                        <a class="dropdown-item" href="../collections/david-bekham.html">David
+                                            Beckham</a>
+                                        <a class="dropdown-item" href="../collections/Dior.html">Dior</a>
+                                        <a class="dropdown-item">Dolce & Gabbana</a>
+                                        <a class="dropdown-item">Dsquared2</a>
+                                        <a class="dropdown-item">Emporio Armani</a>
+                                        <a class="dropdown-item">Esmont</a>
+                                        <a class="dropdown-item">Eyepetizer</a>
+                                        <a class="dropdown-item">Fendi</a>
+                                        <a class="dropdown-item">For Art's Sake</a>
+                                        <a class="dropdown-item">Gast</a>
+                                        <a class="dropdown-item">Giorgio Armani</a>
+                                        <a class="dropdown-item">Givenchy</a>
+                                        <a class="dropdown-item">Gucci</a>
+                                        <a class="dropdown-item">Hublot</a>
+                                        <a class="dropdown-item">Hugo Boss</a>
+                                    </div>
+
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h6>&nbsp &nbsp L - P</h6>
+                                        <a class="dropdown-item" href="../collections/Lindberg.html">Lindberg</a>
+                                        <a class="dropdown-item" href="../collections/Leimann.html">Leimann</a>
+                                        <a class="dropdown-item">Masunaga</a>
+                                        <a class="dropdown-item">Matsuda</a>
+                                        <a class="dropdown-item">Marc Jacobs</a>
+                                        <a class="dropdown-item">Maybach</a>
+                                        <a class="dropdown-item">Maui Jim</a>
+                                        <a class="dropdown-item">Miu Miu</a>
+                                        <a class="dropdown-item">Moncler</a>
+                                        <a class="dropdown-item">Montblanc</a>
+                                        <a class="dropdown-item">Moscot</a>
+                                        <a class="dropdown-item">Oakley</a>
+                                        <a class="dropdown-item">Oakley Meta</a>
+                                        <a class="dropdown-item">Off White</a>
+                                        <a class="dropdown-item">Oliver Peoples</a>
+                                    </div>
+
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h6>&nbsp &nbsp R - Z</h6>
+                                        <a class="dropdown-item" href="../collections/Rigards.html">Rigards</a>
+                                        <a class="dropdown-item" href="../collections/RayBan.html">Ray-Ban</a>
+                                        <a class="dropdown-item">Ray-Ban Meta</a>
+                                        <a class="dropdown-item">Sato</a>
+                                        <a class="dropdown-item">Swarovski</a>
+                                        <a class="dropdown-item">Tag Heuer</a>
+                                        <a class="dropdown-item">Tom Ford</a>
+                                        <a class="dropdown-item">Vava</a>
+                                        <a class="dropdown-item">Vakay</a>
+                                        <a class="dropdown-item">Valentino</a>
+                                        <a class="dropdown-item">Versace</a>
+                                        <a class="dropdown-item">Vogue</a>
+                                        <a class="dropdown-item">Zilli</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../collections/dos-sale.html">
+                            SALE
+                            <sup>
+                                <span class="badge text-bg-danger">
+                                    Ends Soon
+                                </span>
+                            </sup>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../collections/collectors-edition.html">
+                            COLLECTOR'S EDITION
+                        </a>
+                    </li>
+
+
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                            SUNGLASSES
+                        </button>
+
+                        <ul class="dropdown-menu">
+                            <a href="../collections/all-sunglasses.html" style="text-decoration: none;">
+                                <li><button class="dropdown-item">All Sunglasses</button></li>
+                            </a>
+                            <a href="../collections/best-seller-sunglasses.html" style="text-decoration: none;">
+                                <li><button class="dropdown-item">Bestsellers</button></li>
+                            </a>
+                            <li><button class="dropdown-item">Men</button></li>
+                            <li><button class="dropdown-item">Women</button></li>
+                            <li><button class="dropdown-item">Unisex</button></li>
+                            <li><button class="dropdown-item">featured Styles</button></li>
+                            <li><button class="dropdown-item">Top Brands</button></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                            OPTICALS
+                        </button>
+
+                        <ul class="dropdown-menu">
+                            <a href="../collections/all-frames-opticals.html" style="text-decoration: none;">
+                                <a href="./collections/all-frames-opticals.html" style="text-decoration: none;">
+                                    <li><button class="dropdown-item">All Frames</button></li>
+                                </a>
+                                <a href="../collections/best-sellers-opticals.html" style="text-decoration: none;">
+                                    <li><button class="dropdown-item">Bestsellers</button></li>
+                                </a>
+                                <li><button class="dropdown-item">Men</button></li>
+                                <li><button class="dropdown-item">Women</button></li>
+                                <li><button class="dropdown-item">Unisex</button></li>
+                                <li><button class="dropdown-item">featured Styles</button></li>
+                                <li><button class="dropdown-item">Top Brands</button></li>
+                                <li><button class="dropdown-item">Contact lenses</button></li>
+                        </ul>
+                    </div>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../pages/aboutus.html">
+                            OUR STORY
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../pages/our-boutiques.html">
+                            OUR BOUTIQUES
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- ................. -->
+
+    <div class="container-fluid text-center mt-5 ">
+        <h2>Our Boutiques</h2>
+        <img src="../images/ourbouticqsbg.webp" class="img-fluid" alt="ourbouticqsbg">
+    </div>
+
+    <!-- ............. -->
+
+    <div class="m-5">
+        <h2>Find Us</h2>
+    </div>
+
+    <!-- ................. -->
+
+    <ul class="nav nav-tabs justify-content-center bg-light p-2 m-5 border" id="cityTab" role="tablist">
+
+        <li class="nav-item">
+            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#delhi">
+                Delhi
+            </button>
+        </li>
+
+        <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#mumbai">
+                Mumbai
+            </button>
+        </li>
+
+        <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#gurugram">
+                Gurugram
+            </button>
+        </li>
+
+        <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#chandigarh">
+                Chandigarh
+            </button>
+        </li>
+
+        <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#mohali">
+                Mohali
+            </button>
+        </li>
+
+    </ul>
+
+
+    <div class="tab-content p-4 bg-light m-5">
+
+        <div class="tab-pane fade show active" id="delhi">
+
+            <div class="container">
+                <div class="row g-5">
+
+                    <div class="col-md-4">
+                        <p>
+                            Shop No. 21,<br>
+                            Khan Market,<br>
+                            New Delhi – 110003
+                        </p>
+
+                        <p>
+                            011-24618587 / 24698587 / +91 9891741555<br>
+                            info@dayalopticalsindia.com<br>
+                            Mon – Sat: 11 am to 8:30 pm<br>
+                            Sun: 11:30 am to 8:30 pm
+                        </p>
+                        <a
+                            href="https://www.google.com/maps?q=28.599843,77.22698500000001&ll=28.599843,77.22698500000001&z=17"><button
+                                class="btn btn-warning text-white">GET DIRECTIONS</button></a>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <p>
+                            Shop No. 18A,<br>
+                            Khan Market,<br>
+                            New Delhi – 110003
+                        </p>
+
+                        <p>
+                            011-24698588 / +91 9310106605<br>
+                            info@dayalopticalsindia.com<br>
+                            Mon – Sat: 11 am to 8:30 pm<br>
+                            Sun: 11:30 am to 8:30 pm
+                        </p>
+
+                        <a
+                            href="https://www.google.com/maps/place/Dayal+Opticals+India+Pvt.+Ltd./@28.602735,77.226065,17z/data=!4m5!3m4!1s0x390ce2c2b8260fd3:0xcc51b685d81e20f8!8m2!3d28.602768!4d77.228281"><button
+                                class="btn btn-warning text-white">GET DIRECTIONS</button></a>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <p>
+                            Shop No. H, Inside Arcade,<br>
+                            Khan Market,<br>
+                            New Delhi – 110003
+                        </p>
+
+                        <p>
+                            011-41515868 / 24658595 / +91 9310109830<br>
+                            info@dayalopticalsindia.com<br>
+                            Mon – Sat: 11 am to 8:30 pm<br>
+                            Sun: 11:30 am to 8:30 pm
+                        </p>
+
+                        <a
+                            href="https://www.google.com/maps?q=28.6000416,77.22720230000004&ll=28.6000416,77.22720230000004&z=17"><button
+                                class="btn btn-warning text-white">GET DIRECTIONS</button></a>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <p>
+                            Shop No. 75,<br>
+                            Khan Market,<br>
+                            New Delhi – 110003
+                        </p>
+
+                        <p>
+                            011-41518900 / +91 8287048887<br>
+                            info@dayalopticalsindia.com<br>
+                            Mon – Sat: 11 am to 8:30 pm<br>
+                            Sun: 11:30 am to 8:30 pm
+                        </p>
+
+                        <a
+                            href="https://www.google.com/maps?q=28.6000416,77.22720230000004&ll=28.6000416,77.22720230000004&z=17"><button
+                                class="btn btn-warning text-white">GET DIRECTIONS</button></a>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <p>
+                            Shop No. 68-B,<br>
+                            Select Citywalk, Saket<br>
+                            New Delhi – 110017
+                        </p>
+
+                        <p>
+                            011-40597500 / 40597501 / +91 7419215215<br>
+                            info@dayalopticalsindia.com<br>
+                            Mon – Sun: 10:30 am to 10 pm
+                        </p>
+
+                        <a
+                            href="https://www.google.com/maps?q=28.52850759999999,77.21910120000007&ll=28.52850759999999,77.21910120000007&z=17"><button
+                                class="btn btn-warning text-white">GET DIRECTIONS</button></a>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <p>
+                            Shop No. 134,<br>
+                            Ground Floor, DLF Avenue, Saket<br>
+                            New Delhi – 110017
+                        </p>
+
+                        <p>
+                            011-46150500 / 46150501 / +91 9310102325<br>
+                            info@dayalopticalsindia.com<br>
+                            Mon – Sun: 10:45 am to 9:30 pm
+                        </p>
+
+                        <a
+                            href="https://www.google.com/maps?q=28.5279476,77.21685409999999&ll=28.5279476,77.21685409999999&z=17">
+                            <button class="btn btn-warning text-white">GET DIRECTIONS</button></a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="mumbai">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+
+                        <p>
+                            106/108, Ground Floor,<br>
+                            Jai Hind building, Nagindas Master Road,<br>
+                            Fort, Mumbai (Maharashtra) – 400001
+                        </p>
+
+                        <p>
+                            022-45785212 / +91 9205425544<br>
+                            info@dayalopticalsindia.com<br>
+                            Mon – Sun: 11:00 am to 8:30 pm
+                        </p>
+
+                        <a
+                            href="https://www.google.com/maps/place/Dayal+Opticals/@18.929178,72.8323462,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7d1138708c765:0x2e343575fccfdb95!8m2!3d18.929178!4d72.8323462!16s%2Fg%2F11y_rt4r_v?entry=tts&g_ep=EgoyMDI2MDIwOC4wIPu8ASoASAFQAw%3D%3D&skid=744c1e84-e199-4f32-8232-3772e7b35368"><button
+                                class="btn btn-warning text-white">
+                                GET DIRECTIONS
+                            </button></a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="gurugram">
+
+            <div class="container">
+                <div class="row g-5">
+
+                    <div class="col-md-4">
+                        <p>
+                            Shop No. A 5,<br>
+                            Lower Ground Floor,<br>
+                            Ardee Mall, Ardee City,<br>
+                            Sector-52, Gurugram<br>
+                            Haryana – 122003
+                        </p>
+
+                        <p>
+                            0124-2806659 / +91 9310110457<br>
+                            info@dayalopticalsindia.com<br>
+                            Mon – Fri: 11:30 am to 9 pm<br>
+                            Sat – Sun: 11:30 am to 9:30 pm
+                        </p>
+
+                        <a
+                            href="https://www.google.com/maps?q=Ardee+Mall,+Ardee+City+Rd,+Block+B,+Ardee+City,+Sector+52,+Gurugram,+Haryana+122022&ftid=0x390d18be1485fd9b:0xadfc99d2b06147c2&hl=en-IN&gl=in&entry=gps&g_ep=INeCAw%3D%3D&g_st=iw">
+                            <button class="btn btn-warning text-white">
+                                GET DIRECTIONS
+                            </button></a>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <p>
+                            11- Ground floor,<br>
+                            MGF Metropolitan Mall,<br>
+                            M.G. Road, Gurugram<br>
+                            Haryana – 122002
+                        </p>
+
+                        <p>
+                            0124-4018311 / 4018411 / +91 9310100878<br>
+                            info@dayalopticalsindia.com<br>
+                            Mon – Sun: 11 am to 8:30 pm
+                        </p>
+
+                        <a
+                            href="https://www.google.com/maps/place/28%C2%B028'51.4%22N+77%C2%B004'48.8%22E/@28.4809492,77.0776447,17z/data=!3m1!4b1!4m4!3m3!8m2!3d28.4809492!4d77.0802196?hl=en&entry=ttu">
+                            <button class="btn btn-warning text-white">
+                                GET DIRECTIONS
+                            </button></a>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <p>
+                            Shop No. 98,<br>
+                            Galleria Market,<br>
+                            DLF Phase-4, Gurugram<br>
+                            Haryana – 122009
+                        </p>
+
+                        <p>
+                            0124-4378587 / +91 9310100915<br>
+                            info@dayalopticalsindia.com<br>
+                            Mon – Sun: 11 am to 8:30 pm
+                        </p>
+
+                        <a
+                            href="https://www.google.com/maps?q=28.4673476,77.08151620000001&ll=28.4673476,77.08151620000001&z=17"><button
+                                class="btn btn-warning text-white">
+                                GET DIRECTIONS
+                            </button></a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="chandigarh">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+
+                        <p>
+                            Building no. 16 ground floor,<br>
+                            Sector 8B Market Chandigarh – 160009
+                        </p>
+
+                        <p>
+                            +91 8920465856<br>
+                            info@dayalopticalsindia.com<br>
+                            Mon – Sun: 11:00 am to 8:30 pm
+                        </p>
+
+                        <a
+                            href="https://www.google.com/maps/dir//Building+no.+16+ground+floor,+near+Baker+Brothers,+8B,+Sector+8,+Chandigarh,+160009/@30.7400983,76.7152549,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390fed9c11d3feb7:0x398109d360e76850!2m2!1d76.7976562!2d30.7401243?entry=ttu">
+                            <button class="btn btn-warning text-white">
+                                GET DIRECTIONS
+                            </button></a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="mohali">
+
+            <p>
+                Shop No Ground Floor-019C,<br>
+                CP67 Mall, Airport Road Mohali,<br>
+                Sector 67, SAS Nagar, Punjab – 160062
+            </p>
+
+            <p>
+                0172-4017378 / +91 8383933967<br>
+                info@dayalopticalsindia.com<br>
+                Mon – Sun: 10:45 am to 10:00 pm
+            </p>
+
+            <a
+                href="https://www.google.com/maps/place/30%C2%B040'38.0%22N+76%C2%B043'25.5%22E/@30.6772268,76.7211751,17z/data=!3m1!4b1!4m4!3m3!8m2!3d30.6772222!4d76.72375?hl=en&entry=ttu">
+                <button class="btn btn-warning text-white">
+                    GET DIRECTIONS
+                </button></a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ................. -->
+
+    <div class="container-fluid footer p-5 text-secondary mt-5" style="background-color: rgb(86, 66, 49);">
+        <div class="row ">
+            <div class="col-12 col-md-6 col-lg-3">
+                <ul style="list-style-type: none;">
+                    <a href="#" class="text-white"><b>About Dayal Opticals</b></a>
+
+                    <a href="./pages/aboutus.html">
+                        <li>About Us</li>
+                    </a>
+                    <a href="./pages/our-boutiques.html">
+                        <li>Store Locator</li>
+                    </a>
+                    <a href="">
+                        <li>Blogs</li>
+                    </a>
+                    <a href="">
+                        <li>Authenticity & Warranty</li>
+                    </a>
+                    <a href="">
+                        <li>Work with us </li>
+                    </a>
+                    <a href="">
+                        <li>FAQs</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <ul style="list-style-type: none;">
+                    <a href="#" class="text-white"><b>About Dayal Opticals</b></a>
+
+                    <a href="">
+                        <li>Policy Pages</li>
+                    </a>
+                    <a href="./pages/refund-cancellation-policy.html">
+                        <li>Refund & Cancellation Policy</li>
+                    </a>
+                    <a href="">
+                        <li>Shipping Policy</li>
+                    </a>
+                    <a href="">
+                        <li>Terms & Condition</li>
+                    </a>
+                    <a href="">
+                        <li>Privacy Policy </li>
+                    </a>
+                    <a href="">
+                        <li>Exchange & Return Policy</li>
+                    </a>
+                </ul>
+
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <ul style="list-style-type: none;">
+                    <a href="#" class="text-white"><b>About Dayal Opticals</b></a>
+
+                    <a href="./collections/ahlem.html">
+                        <li>Top Brands</li>
+                    </a>
+                    <a href="">
+                        <li>Gucci</li>
+                    </a>
+                    <a href="./collections/RayBan.html">
+                        <li>Ray-Ban</li>
+                    </a>
+                    <a href="">
+                        <li>Oakley</li>
+                    </a>
+                    <a href="">
+                        <li>Prada</li>
+                    </a>
+                    <a href="">
+                        <li>Ray-Ban Meta</li>
+                    </a>
+                    <a href="">
+                        <li>Burberry</li>
+                    </a>
+                    <a href="">
+                        <li>David Beckham</li>
+                    </a>
+                    <a href="">
+                        <li>Gast</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <ul style="list-style-type: none;">
+                    <a href="#" class="text-white"><b>About Dayal Opticals</b></a>
+
+                    <li>Contact Us</li>
+                    <li>Phone Number:</li>
+                    <li>Delhi - +91 9310106605 / 011 24698588 </li>
+                    <li>Mumbai - +91 9205425544 / 022-45785212 </li>
+                    <li>Gurugram - +91 9310100915 / 0124-4378587</li>
+                    <li>Chandigarh - +91 89204 65856 </li>
+                    <li>Mohali - +91 8383933967 </li>
+                    <li>Customer care - +91 9354651521 (Mon to Sat: 10am to 7pm) </li>
+                    <li>Email: info@dayalopticalsindia.com </li>
+                    <li class="d-flex gap-5"><i class="bi bi-facebook"></i> <i class="bi bi-instagram"></i><i
+                            class="bi bi-linkedin"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <h6 class="text-white">Subscribe to stay updated about offers, stock <br> updates and more</h6>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" placeholder="Email">
+                    <button class="btn btn-outline-secondary" type="button">
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div> <br>
+        <hr>
+        <div class="mt-3">
+            <div class="btn-group dropup">
+                <button type="button" class="btn  text-white dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    English
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                </ul>
+            </div>
+            <p class="text-white"> © 2026 Dayal Opticals, All rights reserved.</p>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Beckham</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+ <style>
+        .header {
+            background-color: rgb(247, 244, 238);
+        }
+
+        .footer ul a {
+            text-decoration: none;
+            color: gray;
+            line-height: 2;
+        }
+
+        .footer ul a:hover {
+            color: white;
+        }
+
+        .footer ul li {
+            color: gray;
+            line-height: 2;
+        }
+
+        .footer ul li:hover {
+            color: white;
+        }
+
+        .second-navbar {
+            top: 80px;
+            z-index: 1020;
+        }
+
+        body {
+            padding-top: 140px;
+
+        }
+
+        /* ................ */
+
+        .carousel-item {
+            height: 500px;
+        }
+
+        .carousel-item img {
+            height: 100%;
+            object-fit: fill;
+        }
+
+        /* ................ */
+
+        .scrolling-text {
+            width: 100%;
+            overflow: hidden;
+            background-color: rgb(56, 42, 31);
+            height: 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        .scrolling-text-inner {
+            display: flex;
+            width: max-content;
+            animation: scrollLeft 20s linear infinite;
+        }
+
+        .scrolling-text-item {
+            color: white;
+            font-size: 28px;
+            font-weight: 600;
+            margin-right: 60px;
+            white-space: nowrap;
+        }
+
+        @keyframes scrollLeft {
+
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+
+        }
+
+        .Instagram-slider {
+            animation: scrollSlider 20s linear infinite;
+        }
+
+        .Instagram-slider .col {
+            flex: 0 0 auto;
+            width: auto;
+        }
+
+        .Instagram-slider img {
+            height: 400px;
+        }
+
+        @keyframes scrollSlider {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+      <div
+        class="container-fluid fixed-top d-flex flex-wrap flex-md-nowrap justify-content-between align-items-center header px-3 px-md-5 py-3">
+        <div>
+            <a class="btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                <i class="bi bi-search fs-5"></i></a>
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Search</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <input type="text" class="form-control" placeholder="Search for anything">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="text-center flex-grow-1">
+            <a href="../index.html">
+                <img src="../images/dayallogo.png" alt="dayallogo" class="text-dark img-fluid" style="max-height:60px;">
+            </a>
+        </div>
+
+
+        <div class="d-flex align-items-center gap-2">
+
+            <div class="btn-group">
+                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static"
+                    aria-expanded="false">
+                    <img src="../images/india.png" width="30px">
+                    INR
+                </button>
+                <ul class="dropdown-menu dropdown-menu-lg-end">
+                    <li>
+                        <button class="dropdown-item" type="button">
+                            <img src="../images/india.png" width="30px">
+                            Auto Location
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" type="button">
+                            <img src="../images/usa.png" width="30px">
+                            Us Dollar (USD)
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" type="button">
+                            <img src="../images/euro.webp" width="30px">
+                            Euro (EUR)
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" type="button">
+                            <img src="../images/afg.webp" width="30px">
+                            Afghan (AFN)
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" type="button">
+                            <img src="../images/caneda.webp" width="30px" alt="caneda">
+                            Canadian Dollar
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="../account/login.html" style="text-decoration: none;">
+                <span>
+                    <i class="bi bi-person text-dark fs-5 px-2"></i>
+                </span>
+            </a>
+            <a class="btn" data-bs-toggle="offcanvas" href="#cartOffcanvas" role="button" aria-controls="cartOffcanvas">
+
+                <i class="bi bi-cart fs-5"></i>
+            </a>
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false"
+                style="background-color: rgb(247, 244, 238);" tabindex="-1" id="cartOffcanvas"
+                aria-labelledby="cartOffcanvasLabel">
+
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="cartOffcanvasLabel">
+                        Cart
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+                    </button>
+                </div>
+                <div class="offcanvas-body d-flex justify-content-center">
+                    <hr>
+                    <div class="text-center mt-5" style="width: 18rem;">
+                        <img src="../images/cartImg.png" class="card-img-top" alt="cartImg">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Your cart is currently empty.
+                            </p>
+                            <a href="#" class="btn btn-success">
+                                Start Shopping
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <nav class="navbar fixed-top second-navbar navbar-expand-lg" style="background-color: rgb(247, 244, 238);">
+        <br><br><br>
+
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+
+                <ul class="nav justify-content-center w-100">
+
+
+                    <div class="btn-group position-static">
+
+                        <button class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                            SHOP
+                        </button>
+
+                        <div class="dropdown-menu w-100 p-4 overflow-auto" style="max-height:80vh;">
+
+                            <div class="container-fluid">
+                                <div class="row">
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h6>Featured Brands</h6>
+                                        <a class="dropdown-item" href="../collections/RayBan.html">Ray-Ban</a>
+                                        <a class="dropdown-item">Prada</a>
+                                        <a class="dropdown-item">Balenciaga</a>
+                                        <a class="dropdown-item">TOM Ford</a>
+                                        <a class="dropdown-item">Versace</a>
+                                        <a class="dropdown-item">Valentino</a>
+
+
+                                    </div>
+
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h6>By Gender</h6>
+                                        <a class="dropdown-item">women</a>
+                                        <a class="dropdown-item">Men</a>
+                                        <a class="dropdown-item">Unisex</a>
+                                    </div>
+
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h6>By Style</h6>
+                                        <a class="dropdown-item">Sunglasses</a>
+                                        <a class="dropdown-item">Frames</a>
+                                        <a class="dropdown-item">Masunaga</a>
+                                        <a class="dropdown-item">Contact lenses</a>
+                                        <a class="dropdown-item">Accesories</a>
+                                        <a class="dropdown-item">Clip on</a>
+
+
+                                    </div>
+
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h6>By Type</h6>
+                                        <a class="dropdown-item" href="../collections/Rigards.html">Rigards</a>
+                                        <a class="dropdown-item">Ray-Ban</a>
+                                        <a class="dropdown-item">Ray-Ban Meta</a>
+                                        <a class="dropdown-item">Sato</a>
+                                        <a class="dropdown-item">Swarovski</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="btn-group position-static">
+
+                        <button class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                            BRANDS
+                        </button>
+
+                        <div class="dropdown-menu w-100 p-4 overflow-auto" style="max-height:80vh;">
+
+                            <div class="container-fluid">
+                                <div class="row">
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h6>&nbsp &nbsp A - C</h6>
+                                        <a class="dropdown-item" href="../collections/ahlem.html">Ahlem</a>
+                                        <a class="dropdown-item" href="../collections/akoni.html">Akoni</a>
+                                        <a class="dropdown-item">Alexander McQueen</a>
+                                        <a class="dropdown-item">Anna-Karin Karlsson</a>
+                                        <a class="dropdown-item">Balenciaga</a>
+                                        <a class="dropdown-item">Balmain</a>
+                                        <a class="dropdown-item">Bottega Veneta</a>
+                                        <a class="dropdown-item">Burberry</a>
+                                        <a class="dropdown-item">Bvlgari</a>
+                                        <a class="dropdown-item">Capote</a>
+                                        <a class="dropdown-item">Cartier</a>
+                                        <a class="dropdown-item">Carrera</a>
+                                        <a class="dropdown-item">Celine</a>
+                                        <a class="dropdown-item">Chloe</a>
+                                        <a class="dropdown-item">Coco Leni</a>
+                                    </div>
+
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h6>&nbsp &nbsp D - K</h6>
+                                        <a class="dropdown-item"  href="../collections/david-bekham.html">David Beckham</a>
+                                        <a class="dropdown-item"  href="../collections/Dior.html">Dior</a>
+                                        <a class="dropdown-item">Dolce & Gabbana</a>
+                                        <a class="dropdown-item">Dsquared2</a>
+                                        <a class="dropdown-item">Emporio Armani</a>
+                                        <a class="dropdown-item">Esmont</a>
+                                        <a class="dropdown-item">Eyepetizer</a>
+                                        <a class="dropdown-item">Fendi</a>
+                                        <a class="dropdown-item">For Art's Sake</a>
+                                        <a class="dropdown-item">Gast</a>
+                                        <a class="dropdown-item">Giorgio Armani</a>
+                                        <a class="dropdown-item">Givenchy</a>
+                                        <a class="dropdown-item">Gucci</a>
+                                        <a class="dropdown-item">Hublot</a>
+                                        <a class="dropdown-item">Hugo Boss</a>
+                                    </div>
+
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h6>&nbsp &nbsp L - P</h6>
+                                        <a class="dropdown-item" href="../collections/Lindberg.html">Lindberg</a>
+                                        <a class="dropdown-item"  href="../collections/Leimann.html">Leimann</a>
+                                        <a class="dropdown-item">Masunaga</a>
+                                        <a class="dropdown-item">Matsuda</a>
+                                        <a class="dropdown-item">Marc Jacobs</a>
+                                        <a class="dropdown-item">Maybach</a>
+                                        <a class="dropdown-item">Maui Jim</a>
+                                        <a class="dropdown-item">Miu Miu</a>
+                                        <a class="dropdown-item">Moncler</a>
+                                        <a class="dropdown-item">Montblanc</a>
+                                        <a class="dropdown-item">Moscot</a>
+                                        <a class="dropdown-item">Oakley</a>
+                                        <a class="dropdown-item">Oakley Meta</a>
+                                        <a class="dropdown-item">Off White</a>
+                                        <a class="dropdown-item">Oliver Peoples</a>
+                                    </div>
+
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h6>&nbsp &nbsp R - Z</h6>
+                                        <a class="dropdown-item"  href="../collections/Rigards.html">Rigards</a>
+                                        <a class="dropdown-item"  href="../collections/RayBan.html">Ray-Ban</a>
+                                        <a class="dropdown-item">Ray-Ban Meta</a>
+                                        <a class="dropdown-item">Sato</a>
+                                        <a class="dropdown-item">Swarovski</a>
+                                        <a class="dropdown-item">Tag Heuer</a>
+                                        <a class="dropdown-item">Tom Ford</a>
+                                        <a class="dropdown-item">Vava</a>
+                                        <a class="dropdown-item">Vakay</a>
+                                        <a class="dropdown-item">Valentino</a>
+                                        <a class="dropdown-item">Versace</a>
+                                        <a class="dropdown-item">Vogue</a>
+                                        <a class="dropdown-item">Zilli</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../collections/dos-sale.html">
+                            SALE
+                            <sup>
+                                <span class="badge text-bg-danger">
+                                    Ends Soon
+                                </span>
+                            </sup>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../collections/collectors-edition.html">
+                            COLLECTOR'S EDITION
+                        </a>
+                    </li>
+
+
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                            SUNGLASSES
+                        </button>
+
+                        <ul class="dropdown-menu">
+                            <a href="../collections/all-sunglasses.html" style="text-decoration: none;">
+                                <li><button class="dropdown-item">All Sunglasses</button></li>
+                            </a>
+                            <a href="../collections/best-seller-sunglasses.html" style="text-decoration: none;">
+                                <li><button class="dropdown-item">Bestsellers</button></li>
+                            </a>
+                            <li><button class="dropdown-item">Men</button></li>
+                            <li><button class="dropdown-item">Women</button></li>
+                            <li><button class="dropdown-item">Unisex</button></li>
+                            <li><button class="dropdown-item">featured Styles</button></li>
+                            <li><button class="dropdown-item">Top Brands</button></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                            OPTICALS
+                        </button>
+
+                        <ul class="dropdown-menu">
+                            <a href="../collections/all-frames-opticals.html" style="text-decoration: none;">
+                                <a href="./collections/all-frames-opticals.html" style="text-decoration: none;">
+                                    <li><button class="dropdown-item">All Frames</button></li>
+                                </a>
+                                <a href="../collections/best-sellers-opticals.html" style="text-decoration: none;">
+                                    <li><button class="dropdown-item">Bestsellers</button></li>
+                                </a>
+                                <li><button class="dropdown-item">Men</button></li>
+                                <li><button class="dropdown-item">Women</button></li>
+                                <li><button class="dropdown-item">Unisex</button></li>
+                                <li><button class="dropdown-item">featured Styles</button></li>
+                                <li><button class="dropdown-item">Top Brands</button></li>
+                                <li><button class="dropdown-item">Contact lenses</button></li>
+                        </ul>
+                    </div>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../pages/aboutus.html">
+                            OUR STORY
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="../pages/our-boutiques.html">
+                            OUR BOUTIQUES
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- ...................... -->
+
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html"
+                        style="text-decoration: none; color: gray;">Home</a></li>
+                <li class="breadcrumb-item"><a href="#" style="text-decoration: none; color: gray;">Shop</a></li>
+                <li class="breadcrumb-item active" aria-current="page"> <a href="./all-frames-opticals.html"
+                        style="text-decoration: none; color: gray;"></a>David Beckham</li>
+            </ol>
+        </nav>
+    </div>
+
+
+    <div class="container text-center">
+        <h2 style="color: hsl(28, 27%, 26%);">David Beckham
+        </h2>
+        <p>The David Beckham collection brings together refined materials and signature design
+
+            <br>
+            for a look that’s effortlessly confident.
+        </p>
+    </div>
+
+    <div class="container d-flex justify-content-between align-items-center border p-3">
+
+        <div>
+            <p class="mb-0">96 Products</p>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+
+            <div class="dropdown">
+                <a class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Sort by
+                </a>
+
+                 <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Best Selling</a></li>
+                    <li><a class="dropdown-item" href="#">Alphabetically Z-A</a></li>
+                    <li><a class="dropdown-item" href="#">Alphabetically A-Z</a></li>
+                    <li><a class="dropdown-item" href="#">Price, Low to High</a></li>
+                    <li><a class="dropdown-item" href="#">Price, High to Low</a></li>
+                    <li><a class="dropdown-item" href="#">Date, Old to New</a></li>
+                    <li><a class="dropdown-item" href="#">Date, New to Old</a></li>
+                </ul>
+            </div>
+
+            <p class="mb-0"><i class="bi bi-filter"></i> Filter</p>
+
+        </div>
+
+    </div>
+
+    <!-- ................... -->
+
+
+    <div class="container py-5">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+            <div class="col text-center">
+                <div class="position-relative mb-3">
+                    <span class="badge rounded-pill px-3 py-2 position-absolute top-0 start-50 translate-middle-x"
+                        style="background:#7a4b4b;">
+                        Save 25% </span>
+
+                    <img src="../images/pradaoptical.webp" class="img-fluid" style="height:140px; object-fit:contain;">
+                </div>
+
+                <div class="p-4 rounded" style="background:#e9e4df;">
+                    <p class="text-uppercase text-secondary mb-1">PRADA</p>
+
+                    <h6>OPR CO3S</h6>
+
+                    <p class="text-success mb-1">₹34,390.00</p>
+
+                    <p class="mb-3">Available in 3 Colors</p>
+
+                    <button class="btn w-100" style="background:#3b2a1f; color:white;">
+                        Choose options
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="col text-center">
+                <div class="position-relative mb-3">
+                    <span class="badge rounded-pill px-3 py-2 position-absolute top-0 start-50 translate-middle-x"
+                        style="background:#7a4b4b;">
+                        Save 25% </span>
+                    <img src="../images/versace.png" class="img-fluid" style="height:140px; object-fit:contain;">
+                </div>
+                <div class="p-4 rounded" style="background:#e9e4df;">
+                    <p class="text-uppercase text-secondary mb-1">VERSACE</p>
+
+                    <h6>0VE 4503U</h6>
+                    <p class="mb-1">
+                        <span class="text-success">₹24,191.20</span>
+                        <span class="text-danger text-decoration-line-through">
+                            ₹27,490.00
+                        </span>
+                    </p>
+                    <p class="mb-3">Available in 2 Colors</p>
+                    <button class="btn w-100" style="background:#3b2a1f; color:white;">
+                        Choose options
+                    </button>
+                </div>
+            </div>
+
+            <div class="col text-center">
+                <div class="position-relative mb-3">
+                    <span class="badge rounded-pill px-3 py-2 position-absolute top-0 start-50 translate-middle-x"
+                        style="background:#7a4b4b;">
+                        Save 25% </span>
+                    <img src="../images/tomford (2).png" class="img-fluid" style="height:140px; object-fit:contain;">
+                </div>
+                <div class="p-4 rounded" style="background:#e9e4df;">
+                    <p class="text-uppercase text-secondary mb-1">TOM FORD</p>
+                    <h6>1318</h6>
+                    <p class="mb-1">
+                        <span class="text-success">₹39,150.00</span>
+                        <span class="text-danger text-decoration-line-through">
+                            ₹43,500.00
+                        </span>
+                    </p>
+                    <p class="mb-3">Available in 2 Colors</p>
+                    <button class="btn w-100" style="background:#3b2a1f; color:white;">
+                        Choose options
+                    </button>
+                </div>
+            </div>
+
+            <div class="col text-center">
+                <div class="position-relative mb-3">
+                    <span class="badge rounded-pill px-3 py-2 position-absolute top-0 start-50 translate-middle-x"
+                        style="background:#7a4b4b;">
+                        Save 25% </span>
+                    <img src="../images/gast.png" class="img-fluid" style="height:140px; object-fit:contain;">
+                </div>
+                <div class="p-4 rounded" style="background:#e9e4df;">
+                    <p class="text-uppercase text-secondary mb-1">GAST</p>
+                    <h6>RAY</h6>
+                    <p class="mb-1">
+                        <span class="text-success">₹12,665.00</span>
+                        <span class="text-danger text-decoration-line-through">
+                            ₹14,900.00
+                        </span>
+                    </p>
+                    <p class="mb-3">Available in 1 Color</p>
+                    <button class="btn w-100" style="background:#3b2a1f; color:white;">
+                        Choose options
+                    </button>
+                </div>
+            </div>
+
+            <div class="col text-center">
+                <div class="position-relative mb-3">
+                    <span class="badge rounded-pill px-3 py-2 position-absolute top-0 start-50 translate-middle-x"
+                        style="background:#7a4b4b;">
+                        Save 25% </span>
+                    <img src="../images/rayban.png" class="img-fluid" style="height:140px; object-fit:contain;">
+                </div>
+                <div class="p-4 rounded" style="background:#e9e4df;">
+                    <p class="text-uppercase text-secondary mb-1">RAY BAN</p>
+                    <h6>ORB 2140F</h6>
+                    <p class="mb-1">
+                        <span class="text-success">₹11,511.00</span>
+                        <span class="text-danger text-decoration-line-through">
+                            ₹12,790.00
+                        </span>
+                    </p>
+                    <p class="mb-3">Available in 3 Colors</p>
+                    <button class="btn w-100" style="background:#3b2a1f; color:white;">
+                        Choose options
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+            <div class="col text-center">
+                <div class="position-relative mb-3">
+                    <span class="badge rounded-pill px-3 py-2 position-absolute top-0 start-50 translate-middle-x"
+                        style="background:#7a4b4b;">
+                        Save 25% </span>
+
+                    <img src="../images/pradaoptical.webp" class="img-fluid" style="height:140px; object-fit:contain;">
+                </div>
+
+                <div class="p-4 rounded" style="background:#e9e4df;">
+                    <p class="text-uppercase text-secondary mb-1">PRADA</p>
+
+                    <h6>OPR CO3S</h6>
+
+                    <p class="text-success mb-1">₹34,390.00</p>
+
+                    <p class="mb-3">Available in 3 Colors</p>
+
+                    <button class="btn w-100" style="background:#3b2a1f; color:white;">
+                        Choose options
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="col text-center">
+                <div class="position-relative mb-3">
+                    <span class="badge rounded-pill px-3 py-2 position-absolute top-0 start-50 translate-middle-x"
+                        style="background:#7a4b4b;">
+                        Save 25% </span>
+                    <img src="../images/versace.png" class="img-fluid" style="height:140px; object-fit:contain;">
+                </div>
+                <div class="p-4 rounded" style="background:#e9e4df;">
+                    <p class="text-uppercase text-secondary mb-1">VERSACE</p>
+
+                    <h6>0VE 4503U</h6>
+                    <p class="mb-1">
+                        <span class="text-success">₹24,191.20</span>
+                        <span class="text-danger text-decoration-line-through">
+                            ₹27,490.00
+                        </span>
+                    </p>
+                    <p class="mb-3">Available in 2 Colors</p>
+                    <button class="btn w-100" style="background:#3b2a1f; color:white;">
+                        Choose options
+                    </button>
+                </div>
+            </div>
+
+            <div class="col text-center">
+                <div class="position-relative mb-3">
+                    <span class="badge rounded-pill px-3 py-2 position-absolute top-0 start-50 translate-middle-x"
+                        style="background:#7a4b4b;">
+                        Save 25% </span>
+                    <img src="../images/tomford (2).png" class="img-fluid" style="height:140px; object-fit:contain;">
+                </div>
+                <div class="p-4 rounded" style="background:#e9e4df;">
+                    <p class="text-uppercase text-secondary mb-1">TOM FORD</p>
+                    <h6>1318</h6>
+                    <p class="mb-1">
+                        <span class="text-success">₹39,150.00</span>
+                        <span class="text-danger text-decoration-line-through">
+                            ₹43,500.00
+                        </span>
+                    </p>
+                    <p class="mb-3">Available in 2 Colors</p>
+                    <button class="btn w-100" style="background:#3b2a1f; color:white;">
+                        Choose options
+                    </button>
+                </div>
+            </div>
+
+            <div class="col text-center">
+                <div class="position-relative mb-3">
+                    <span class="badge rounded-pill px-3 py-2 position-absolute top-0 start-50 translate-middle-x"
+                        style="background:#7a4b4b;">
+                        Save 25% </span>
+                    <img src="../images/gast.png" class="img-fluid" style="height:140px; object-fit:contain;">
+                </div>
+                <div class="p-4 rounded" style="background:#e9e4df;">
+                    <p class="text-uppercase text-secondary mb-1">GAST</p>
+                    <h6>RAY</h6>
+                    <p class="mb-1">
+                        <span class="text-success">₹12,665.00</span>
+                        <span class="text-danger text-decoration-line-through">
+                            ₹14,900.00
+                        </span>
+                    </p>
+                    <p class="mb-3">Available in 1 Color</p>
+                    <button class="btn w-100" style="background:#3b2a1f; color:white;">
+                        Choose options
+                    </button>
+                </div>
+            </div>
+
+            <div class="col text-center">
+                <div class="position-relative mb-3">
+                    <span class="badge rounded-pill px-3 py-2 position-absolute top-0 start-50 translate-middle-x"
+                        style="background:#7a4b4b;">
+                        Save 25% </span>
+                    <img src="../images/rayban.png" class="img-fluid" style="height:140px; object-fit:contain;">
+                </div>
+                <div class="p-4 rounded" style="background:#e9e4df;">
+                    <p class="text-uppercase text-secondary mb-1">RAY BAN</p>
+                    <h6>ORB 2140F</h6>
+                    <p class="mb-1">
+                        <span class="text-success">₹11,511.00</span>
+                        <span class="text-danger text-decoration-line-through">
+                            ₹12,790.00
+                        </span>
+                    </p>
+                    <p class="mb-3">Available in 3 Colors</p>
+                    <button class="btn w-100" style="background:#3b2a1f; color:white;">
+                        Choose options
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ............................... -->
+
+
+    <div class="container-fluid d-flex justify-content-center">
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <div class="container-fluid scrolling-text mt-5">
+
+        <div class="scrolling-text-inner">
+
+            <div class="scrolling-text-item">
+                DO The world’s Finest Eyewear.
+            </div>
+
+            <div class="scrolling-text-item">
+                DO The world’s Finest Eyewear.
+            </div>
+
+            <div class="scrolling-text-item">
+                DO The world’s Finest Eyewear.
+            </div>
+
+            <div class="scrolling-text-item">
+                DO The world’s Finest Eyewear.
+            </div>
+            <div class="scrolling-text-item">
+                DO The world’s Finest Eyewear.
+            </div>
+            <div class="scrolling-text-item">
+                DO The world’s Finest Eyewear.
+            </div>
+            <div class="scrolling-text-item">
+                DO The world’s Finest Eyewear.
+            </div>
+            <div class="scrolling-text-item">
+                DO The world’s Finest Eyewear.
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container text-center mt-5">
+        <h2>Sunglasses That Define Iconic Style: <br> Step into David Beckham's World
+        </h2>
+        <p>Elevate your style with David Beckham sunglasses and eyeglasses at Dayal Opticals. Known for their iconic <br>
+            designs and premium craftsmanship, David Beckham eyewear offers a perfect fusion of style and quality. <br>
+            Whether you're searching for classic David Beckham glasses or chic David Beckham sunglasses women, our <br>
+            collection is designed to suit every style preference. Discover the latest in luxury David Beckham <br>
+            eyeglasses and find the perfect accessory to upgrade your look today!</p>
+        <h2>Your New Go-To Accessory: Unleash Your Inner Icon with David Beckham Eyewear
+        </h2>
+        <p>David Beckham eyewear- because who does not want to look dapper. Our offering includes a wide range of David <br>
+            Beckham glasses and sunglasses when flawless style is non-negotiable. With an impeccable focus on quality <br>
+            materials and craftsmanship, David Beckham eyeglasses offer unbeatable styles while ensuring you are always <br>
+            at your best self. Be it an event or a simple hangout, these frames will always complete your look.
+
+        </p>
+        <h2>Bold and Daring: David Beckham Sunglasses for the Modern Man
+        </h2>
+        <p>Bold and Daring – David Beckham sunglasses men perfectly combined for the modern man. Abiding to one’s own <br>
+            frame and classic detail, these frames will ensure you make a grand entrance wherever you go. From classy <br>
+            aviators to the popular square shaped David Beckham sunglasses, these are sure to sit well and feel a <br>
+            million bucks. Check out our collection and choose the style which you think suits you the best. <br>
+
+        </p>
+    </div>
+ <!-- ............. -->
+
+     <div class="container-fluid footer p-5 text-secondary mt-5" style="background-color: rgb(86, 66, 49);">
+        <div class="row ">
+            <div class="col-12 col-md-6 col-lg-3">
+                <ul style="list-style-type: none;">
+                    <a href="#" class="text-white"><b>About Dayal Opticals</b></a>
+
+                    <a href="../pages/aboutus.html">
+                        <li>About Us</li>
+                    </a>
+                    <a href="">
+                        <li>Store Locator</li>
+                    </a>
+                    <a href="">
+                        <li>Blogs</li>
+                    </a>
+                    <a href="">
+                        <li>Authenticity & Warranty</li>
+                    </a>
+                    <a href="">
+                        <li>Work with us </li>
+                    </a>
+                    <a href="">
+                        <li>FAQs</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <ul style="list-style-type: none;">
+                    <a href="#" class="text-white"><b>About Dayal Opticals</b></a>
+
+                    <a href="">
+                        <li>Policy Pages</li>
+                    </a>
+                    <a href="">
+                        <li>Refund & Cancellation Policy</li>
+                    </a>
+                    <a href="">
+                        <li>Shipping Policy</li>
+                    </a>
+                    <a href="">
+                        <li>Terms & Condition</li>
+                    </a>
+                    <a href="">
+                        <li>Privacy Policy </li>
+                    </a>
+                    <a href="">
+                        <li>Exchange & Return Policy</li>
+                    </a>
+                </ul>
+
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <ul style="list-style-type: none;">
+                    <a href="#" class="text-white"><b>About Dayal Opticals</b></a>
+
+                    <a href="">
+                        <li>Top Brands</li>
+                    </a>
+                    <a href="">
+                        <li>Gucci</li>
+                    </a>
+                    <a href="">
+                        <li>Ray-Ban</li>
+                    </a>
+                    <a href="">
+                        <li>Oakley</li>
+                    </a>
+                    <a href="">
+                        <li>Prada</li>
+                    </a>
+                    <a href="">
+                        <li>Ray-Ban Meta</li>
+                    </a>
+                    <a href="">
+                        <li>Burberry</li>
+                    </a>
+                    <a href="">
+                        <li>David Beckham</li>
+                    </a>
+                    <a href="">
+                        <li>Gast</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <ul style="list-style-type: none;">
+                    <a href="#" class="text-white"><b>About Dayal Opticals</b></a>
+
+                    <li>Contact Us</li>
+                    <li>Phone Number:</li>
+                    <li>Delhi - +91 9310106605 / 011 24698588 </li>
+                    <li>Mumbai - +91 9205425544 / 022-45785212 </li>
+                    <li>Gurugram - +91 9310100915 / 0124-4378587</li>
+                    <li>Chandigarh - +91 89204 65856 </li>
+                    <li>Mohali - +91 8383933967 </li>
+                    <li>Customer care - +91 9354651521 (Mon to Sat: 10am to 7pm) </li>
+                    <li>Email: info@dayalopticalsindia.com </li>
+                    <li class="d-flex gap-5"><i class="bi bi-facebook"></i> <i class="bi bi-instagram"></i><i
+                            class="bi bi-linkedin"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <h6 class="text-white">Subscribe to stay updated about offers, stock <br> updates and more</h6>
+
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" placeholder="Email">
+                    <button class="btn btn-outline-secondary" type="button">
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div> <br>
+        <hr>
+        <div class="mt-3">
+            <div class="btn-group dropup">
+                <button type="button" class="btn  text-white dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    English
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                </ul>
+            </div>
+            <p class="text-white"> © 2026 Dayal Opticals, All rights reserved.</p>
+        </div>
+
+    </div>
+
+
+    <!-- ................. -->
+
+    <div class="container-fluid footer p-5 text-secondary mt-5" style="background-color: rgb(86, 66, 49);">
+        <div class="row ">
+            <div class="col-12 col-md-6 col-lg-3">
+                <ul style="list-style-type: none;">
+                    <a href="#" class="text-white"><b>About Dayal Opticals</b></a>
+
+                    <a href="./pages/aboutus.html">
+                        <li>About Us</li>
+                    </a>
+                    <a href="./pages/our-boutiques.html">
+                        <li>Store Locator</li>
+                    </a>
+                    <a href="">
+                        <li>Blogs</li>
+                    </a>
+                    <a href="">
+                        <li>Authenticity & Warranty</li>
+                    </a>
+                    <a href="">
+                        <li>Work with us </li>
+                    </a>
+                    <a href="">
+                        <li>FAQs</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <ul style="list-style-type: none;">
+                    <a href="#" class="text-white"><b>About Dayal Opticals</b></a>
+
+                    <a href="">
+                        <li>Policy Pages</li>
+                    </a>
+                    <a href="./pages/refund-cancellation-policy.html">
+                        <li>Refund & Cancellation Policy</li>
+                    </a>
+                    <a href="">
+                        <li>Shipping Policy</li>
+                    </a>
+                    <a href="">
+                        <li>Terms & Condition</li>
+                    </a>
+                    <a href="">
+                        <li>Privacy Policy </li>
+                    </a>
+                    <a href="">
+                        <li>Exchange & Return Policy</li>
+                    </a>
+                </ul>
+
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <ul style="list-style-type: none;">
+                    <a href="#" class="text-white"><b>About Dayal Opticals</b></a>
+
+                    <a href="./collections/ahlem.html">
+                        <li>Top Brands</li>
+                    </a>
+                    <a href="">
+                        <li>Gucci</li>
+                    </a>
+                    <a href="./collections/RayBan.html">
+                        <li>Ray-Ban</li>
+                    </a>
+                    <a href="">
+                        <li>Oakley</li>
+                    </a>
+                    <a href="">
+                        <li>Prada</li>
+                    </a>
+                    <a href="">
+                        <li>Ray-Ban Meta</li>
+                    </a>
+                    <a href="">
+                        <li>Burberry</li>
+                    </a>
+                    <a href="">
+                        <li>David Beckham</li>
+                    </a>
+                    <a href="">
+                        <li>Gast</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <ul style="list-style-type: none;">
+                    <a href="#" class="text-white"><b>About Dayal Opticals</b></a>
+
+                    <li>Contact Us</li>
+                    <li>Phone Number:</li>
+                    <li>Delhi - +91 9310106605 / 011 24698588 </li>
+                    <li>Mumbai - +91 9205425544 / 022-45785212 </li>
+                    <li>Gurugram - +91 9310100915 / 0124-4378587</li>
+                    <li>Chandigarh - +91 89204 65856 </li>
+                    <li>Mohali - +91 8383933967 </li>
+                    <li>Customer care - +91 9354651521 (Mon to Sat: 10am to 7pm) </li>
+                    <li>Email: info@dayalopticalsindia.com </li>
+                    <li class="d-flex gap-5"><i class="bi bi-facebook"></i> <i class="bi bi-instagram"></i><i
+                            class="bi bi-linkedin"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <h6 class="text-white">Subscribe to stay updated about offers, stock <br> updates and more</h6>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" placeholder="Email">
+                    <button class="btn btn-outline-secondary" type="button">
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div> <br>
+        <hr>
+        <div class="mt-3">
+            <div class="btn-group dropup">
+                <button type="button" class="btn  text-white dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    English
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                </ul>
+            </div>
+            <p class="text-white"> © 2026 Dayal Opticals, All rights reserved.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+
+</html>
